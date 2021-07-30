@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.app{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px dashed black;
+}
+
+
+@keyframes show-loader{
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    100% {
+        transform: trnaslateY(0);
+    }
+}
+
+@keyframes rotate-loader {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes fade-in{
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100px)
+    }
+}
+
+
+.todos-enter-active {
+    animation: fade-in 500ms forwards;
+}
+
+.todos-exit-active {
+    animation: fade-out 500ms forwards;
+}

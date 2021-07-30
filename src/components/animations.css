@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+@keyframes fade-out {
+    0%{
+        opacity: 1;
+        transform: translateX(0)
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+@keyframes show-up {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        transform: rotate(-120deg)
+
+
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        transform: rotate(0)
+    }
+}
+
+
+@keyframes show-down {
+    0% {
+        opacity: 1;
+        transform: rotate(-45deg);
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(120deg);
+        transform: scale(0);
+    }
+}
+
+/* animations-keyframes */
+
+.tick-enter-active {
+    animation: show-up 700ms forwards;
+}
+
+
+.tick-exit-active {
+    animation: show-down 700ms forwards
+}
+
+
+.todo-exit-active {
+    animation: fade-out 500ms forwards;
+}
+
+
+
+.todo-enter-active {
+    animation: fade-in 500ms forwards;
+    border: 1px solid #1B1C20;
+    display: flex;
+    color: white;
+    border-radius: 25px;
+    background-color: #1B1C20;
+    padding: 20px;
+}
+
+
+ /* active-animations */
+
+
+.todo-enter-done {
+    border: 1px solid #1B1C20;
+    display: flex;
+    color: white;
+    border-radius: 25px;
+    background-color: #1B1C20;
+    padding: 20px;
+}
+
+
+
+ /* enter-done */
+
+
+
+.text-block {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btns-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+.btns-col {
+    padding-top: 4px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.tick-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid #E9A631;
+
+
+}
